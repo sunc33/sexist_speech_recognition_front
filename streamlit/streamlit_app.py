@@ -24,7 +24,7 @@ st.markdown(streamlit_style, unsafe_allow_html=True)
 # ----------------------------------
 #         HEADER TITRE ET IMAGE
 # ----------------------------------
-path_image = os.path.join('../../raw_data/Logo/basta.png')
+path_image = os.path.join('../raw_data/Logo/basta.png')
 image = Image.open(path_image)
 
 st.image(image, width = None)
@@ -53,7 +53,7 @@ def tupple(df):
 
 ## PATH A CHANGER POUR LINKER VERS le csv conversations
 
-path_page = os.path.join('../../raw_data/df_page.csv')
+path_page = os.path.join('../raw_data/df_page.csv')
 #'/Users/camillepettineo/code/sunc33/sexist_speech_recognition/sexist_speech_recognition/raw_data/TWITTER_Name_congress.csv'
 df_page = load_csv(path_page)
 # name_tuple = tupple(df_page)
@@ -71,7 +71,7 @@ option = st.selectbox(
 #         HISTOGRAMME : répartition des postes par note moyenne sexisme
 # ----------------------------------
 
-path_post = os.path.join('../../raw_data/df_post.csv')
+path_post = os.path.join('../raw_data/df_post.csv')
 df_post = load_csv(path_post)
 
 
@@ -101,7 +101,7 @@ st.markdown(f"""Sur les {nombre_poste_total} commentaires total hebergés sur ce
 # viz = df[df['title']==option][['sexist','pas_sexist','total_com']]
 # print(viz)
 
-path_image = os.path.join('../../raw_data/Logo/ligne.png')
+path_image = os.path.join('../raw_data/Logo/ligne.png')
 image = Image.open(path_image)
 
 st.image(image, width = None)
@@ -116,7 +116,7 @@ option2 = st.selectbox(
      ' ',
      df_post[df_post['sub_reddit']==option]['post_title'].unique())
 
-path_comments= os.path.join('../../raw_data/df_comments.csv')
+path_comments= os.path.join('../raw_data/df_comments.csv')
 df_comments = pd.read_csv(path_comments)
 
 df_comments_2 = df_comments[df_comments['post_title']==option2]
@@ -177,7 +177,7 @@ if st.checkbox('Show a random comment'):
 # ----------------------------------
 #        BARRE DE CREDIT & METHODO
 # ----------------------------------
-path_image = os.path.join('../../raw_data/Logo/ligne.png')
+path_image = os.path.join('../raw_data/Logo/ligne.png')
 image = Image.open(path_image)
 
 st.image(image, width = None)
@@ -219,7 +219,7 @@ if st.button('🎈🎈 Merci pour votre attention ! 🎈🎈'):
    st.balloons()
 
 ## LOGO LE WAGON
-path_wagon = os.path.join('../../raw_data/Logo/wagon-executive.jpg')
+path_wagon = os.path.join('../raw_data/Logo/wagon-executive.jpg')
 image = Image.open(path_wagon)
 st.image(image, caption='Le Wagon', use_column_width=False)
 
